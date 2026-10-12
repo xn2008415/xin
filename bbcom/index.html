@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANIME REALM | 頂級動漫電影與收藏首選</title>
+    <!-- Google Fonts 質感字體 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <!-- 外部樣式檔 -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- 導覽列 -->
+    <header class="navbar">
+        <div class="logo">ANIME<span>REALM</span></div>
+        <nav class="nav-links">
+            <a href="#featured" class="active">熱門推薦</a>
+            <a href="#movies">電影圖鑑</a>
+            <a href="#about">關於我們</a>
+        </nav>
+        <div class="user-actions">
+            <button class="cart-btn">🛒 購物車 <span class="badge">0</span></button>
+        </div>
+    </header>
+
+    <!-- 主視覺 Banner (Hero Section) -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="tagline">✦ 聖地巡禮 ‧ 收藏經典 ✦</span>
+            <h1>探索極致動漫電影大作</h1>
+            <p>專為動漫迷打造的夢幻影音與限定收藏殿堂，立即探索本季最具話題性熱門劇場版！</p>
+            <a href="#movies" class="cta-primary">立即探索電影列表 ➔</a>
+        </div>
+    </section>
+
+    <!-- 熱門動漫電影卡片區塊 -->
+    <section class="movies-section" id="movies">
+        <div class="section-header">
+            <h2>🔥 殿堂級動漫電影推薦</h2>
+            <p>點擊查看電影詳情、獨家花絮與限定周邊預購</p>
+        </div>
+
+        <div class="movie-grid">
+            
+            <!-- 卡片 01 -->
+            <article class="movie-card" data-id="01">
+                <div class="card-badge">雜誌特輯 / 爆款熱銷</div>
+                <div class="image-wrapper">
+                    <img src="images/01.jpg" alt="鬼滅之刃 無限城篇" loading="lazy">
+                    <div class="overlay-actions">
+                        <button class="quick-view-btn">快速預覽</button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="category">日經娛樂雜誌封面特輯</div>
+                    <h3 class="movie-title">鬼滅之刃 無限城篇 第一章</h3>
+                    <p class="movie-desc">聚焦「猗窩座再來」焦點大戰！封面匯集炭治郎、富岡義勇與猗窩座，內含獨家原畫設定與聲優專訪。[cite: 1]</p>
+                    <div class="card-footer">
+                        <span class="price">NT$ 450</span>
+                        <a href="javascript:void(0)" class="buy-btn">收藏特刊 🛒</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 卡片 02 -->
+            <article class="movie-card" data-id="02">
+                <div class="card-badge">吉卜力經典 / 數位紀念版</div>
+                <div class="image-wrapper">
+                    <img src="images/02.jpg" alt="神隱少女" loading="lazy">
+                    <div class="overlay-actions">
+                        <button class="quick-view-btn">快速預覽</button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="category">宮崎駿 經典作品</div>
+                    <h3 class="movie-title">千與千尋（神隱少女）</h3>
+                    <p class="movie-desc">繁體中文數位紀念版海報[cite: 2]！巧妙的鏡像倒影設計，將千尋、白龍、無臉男等角色融於極致天空藍中[cite: 2]。</p>
+                    <div class="card-footer">
+                        <span class="price">NT$ 1,280</span>
+                        <a href="javascript:void(0)" class="buy-btn">購買海報 🛒</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 卡片 03 -->
+            <article class="movie-card" data-id="03">
+                <div class="card-badge">40 週年限定 / 遠藤達哉 繪</div>
+                <div class="image-wrapper">
+                    <img src="images/03.jpg" alt="魔女宅急便" loading="lazy">
+                    <div class="overlay-actions">
+                        <button class="quick-view-btn">快速預覽</button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="category">原著小說紀念特別版</div>
+                    <h3 class="movie-title">魔女宅急便 40週年紀念封面</h3>
+                    <p class="movie-desc">由《間諜家家酒》作者遠藤達哉親自繪製[cite: 3]！重現琪琪與黑貓吉吉騎掃帚劃過滿月夜空的溫馨靈動畫面[cite: 3]。</p>
+                    <div class="card-footer">
+                        <span class="price">NT$ 880</span>
+                        <a href="javascript:void(0)" class="buy-btn">珍藏限定版 🛒</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 卡片 04 -->
+            <article class="movie-card" data-id="04">
+                <div class="card-badge">照明娛樂 / 搞笑冒險</div>
+                <div class="image-wrapper">
+                    <img src="images/04.jpg" alt="小小兵與怪獸" loading="lazy">
+                    <div class="overlay-actions">
+                        <button class="quick-view-btn">快速預覽</button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="category">環球影業 概念電影</div>
+                    <h3 class="movie-title">小小兵與怪獸 (Minions & Monsters)</h3>
+                    <p class="movie-desc">單眼小小兵誤闖怪獸巨眼黏液狂潮[cite: 4]！標誌性的呆萌無奈眼神搭配高飽和視覺，充滿趣味與吸睛效果[cite: 4]。</p>
+                    <div class="card-footer">
+                        <span class="price">NT$ 650</span>
+                        <a href="javascript:void(0)" class="buy-btn">預購電影周邊 🛒</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 卡片 05 -->
+            <article class="movie-card" data-id="05">
+                <div class="card-badge">名偵探柯南 / 高速推理</div>
+                <div class="image-wrapper">
+                    <img src="images/05.jpg" alt="名偵探柯南 高速公路的墮天使" loading="lazy">
+                    <div class="overlay-actions">
+                        <button class="quick-view-btn">快速預覽</button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="category">劇場版大作</div>
+                    <h3 class="movie-title">名偵探柯南：高速公路的墮天使</h3>
+                    <p class="movie-desc">掀起一陣狂潮的旋風[cite: 5]！以神奈川縣警與疾風重型機車為背景，柯南與警視廳同仁聯手展開速度感極致的推理決戰[cite: 5]。</p>
+                    <div class="card-footer">
+                        <span class="price">NT$ 380</span>
+                        <a href="javascript:void(0)" class="buy-btn">預購預售票 🛒</a>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- 頁尾 -->
+    <footer class="footer">
+        <p>© 2026 ANIME REALM Inc. All Rights Reserved. 專為動漫愛好者打造的極致殿堂。</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,352 @@
+/* ==========================================================================
+   全域變數與重置 (Variables & Reset)
+   ========================================================================== */
+:root {
+    --bg-dark: #0b0d17;
+    --card-bg: rgba(22, 27, 46, 0.75);
+    --primary-neon: #ff2a5f;
+    --secondary-neon: #00f0ff;
+    --accent-gold: #ffbd39;
+    --text-white: #f0f3f8;
+    --text-gray: #a0a7b5;
+    --radius-lg: 16px;
+    --radius-sm: 8px;
+    --transition-fast: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans TC', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* ==========================================================================
+   導覽列 (Navbar)
+   ========================================================================== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 5%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(11, 13, 23, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--primary-neon);
+}
+
+.nav-links a {
+    color: var(--text-gray);
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+    transition: var(--transition-fast);
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--secondary-neon);
+    text-shadow: 0 0 8px rgba(0, 240, 255, 0.5);
+}
+
+.cart-btn {
+    background: linear-gradient(135deg, var(--primary-neon), #ff5e00);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255, 42, 95, 0.4);
+    transition: var(--transition-fast);
+}
+
+.cart-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 42, 95, 0.6);
+}
+
+/* ==========================================================================
+   主視覺看板 (Hero Section)
+   ========================================================================== */
+.hero {
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    padding: 0 20px;
+    background: radial-gradient(circle at center, #1f1a3a 0%, var(--bg-dark) 70%);
+}
+
+.hero-content {
+    max-width: 800px;
+    z-index: 2;
+}
+
+.tagline {
+    color: var(--secondary-neon);
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+    display: inline-block;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 15px;
+    background: linear-gradient(to right, #ffffff, var(--secondary-neon));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    color: var(--text-gray);
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.cta-primary {
+    display: inline-block;
+    padding: 14px 32px;
+    background: linear-gradient(135deg, var(--secondary-neon), #0072ff);
+    color: #000;
+    font-weight: 900;
+    text-decoration: none;
+    border-radius: 30px;
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
+    transition: var(--transition-fast);
+}
+
+.cta-primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(0, 240, 255, 0.8);
+}
+
+/* ==========================================================================
+   卡片展示區 (Movies Grid Section)
+   ========================================================================== */
+.movies-section {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    font-size: 2.2rem;
+    margin-bottom: 8px;
+    color: var(--text-white);
+}
+
+.section-header p {
+    color: var(--text-gray);
+}
+
+/* 網格佈局 */
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* 動漫電影卡片 */
+.movie-card {
+    background: var(--card-bg);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: var(--transition-fast);
+}
+
+.movie-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--secondary-neon);
+    box-shadow: 0 12px 30px rgba(0, 240, 255, 0.25);
+}
+
+/* 角標 */
+.card-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: rgba(11, 13, 23, 0.85);
+    color: var(--accent-gold);
+    border: 1px solid var(--accent-gold);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 20px;
+    z-index: 10;
+    backdrop-filter: blur(5px);
+}
+
+/* 圖片外框 */
+.image-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 100%; /* 1:1 正方形 (適應 300x300 圖片) */
+    overflow: hidden;
+}
+
+.image-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.movie-card:hover .image-wrapper img {
+    transform: scale(1.08);
+}
+
+/* 快速預覽按鈕 (Hover 時浮現) */
+.overlay-actions {
+    position: absolute;
+    inset: 0;
+    background: rgba(11, 13, 23, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: var(--transition-fast);
+}
+
+.movie-card:hover .overlay-actions {
+    opacity: 1;
+}
+
+.quick-view-btn {
+    background: var(--text-white);
+    color: var(--bg-dark);
+    border: none;
+    padding: 10px 20px;
+    font-weight: 700;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.quick-view-btn:hover {
+    background: var(--secondary-neon);
+}
+
+/* 卡片內文 */
+.card-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.category {
+    font-size: 0.8rem;
+    color: var(--secondary-neon);
+    font-weight: 700;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+}
+
+.movie-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.4;
+    color: var(--text-white);
+}
+
+.movie-desc {
+    font-size: 0.88rem;
+    color: var(--text-gray);
+    margin-bottom: 20px;
+    flex-grow: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* 卡片底部 CTA */
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 15px;
+}
+
+.price {
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: var(--accent-gold);
+}
+
+.buy-btn {
+    background: rgba(255, 42, 95, 0.15);
+    color: var(--primary-neon);
+    border: 1px solid var(--primary-neon);
+    padding: 8px 16px;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 700;
+    transition: var(--transition-fast);
+}
+
+.buy-btn:hover {
+    background: var(--primary-neon);
+    color: white;
+    box-shadow: 0 0 12px rgba(255, 42, 95, 0.6);
+}
+
+/* ==========================================================================
+   頁尾 (Footer)
+   ========================================================================== */
+.footer {
+    text-align: center;
+    padding: 30px;
+    background: rgba(5, 6, 12, 0.95);
+    color: var(--text-gray);
+    font-size: 0.85rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* 響應式調整 */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2rem; }
+    .movie-grid { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+}
